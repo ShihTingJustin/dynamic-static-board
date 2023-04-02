@@ -39,14 +39,18 @@ describe("測試動態資料", () => {
 
   it("測試 球員", () => {
     const nameAns = ["櫻木花道", "流川楓", "赤木剛憲", "宮城良田", "三井壽"];
-    container.querySelectorAll("#data-panel tr").forEach((node, i) => {
+    const nodeList = container.querySelectorAll("#data-panel tr");
+    expect(nodeList.length).toBe(5);
+    nodeList.forEach((node, i) => {
       expect(node.children[0].textContent).toBe(nameAns[i]);
     });
   });
 
   it("測試 得分", () => {
     const pointAns = ["0", "30", "16", "6", "21"];
-    container.querySelectorAll("#data-panel tr").forEach((node, i) => {
+    const nodeList = container.querySelectorAll("#data-panel tr");
+    expect(nodeList.length).toBe(5);
+    nodeList.forEach((node, i) => {
       expect(node.children[1].children[0].textContent).toBe(pointAns[i]);
       expect(node.children[1].children[1].className).toBe(
         "fa fa-plus-circle up"
@@ -59,7 +63,9 @@ describe("測試動態資料", () => {
 
   it("測試 籃板", () => {
     const reboundAns = ["0", "6", "10", "0", "4"];
-    container.querySelectorAll("#data-panel tr").forEach((node, i) => {
+    const nodeList = container.querySelectorAll("#data-panel tr");
+    expect(nodeList.length).toBe(5);
+    nodeList.forEach((node, i) => {
       expect(node.children[2].children[0].textContent).toBe(reboundAns[i]);
       expect(node.children[2].children[1].className).toBe(
         "fa fa-plus-circle up"
@@ -72,7 +78,9 @@ describe("測試動態資料", () => {
 
   it("測試 助攻", () => {
     const assistAns = ["0", "3", "0", "7", "3"];
-    container.querySelectorAll("#data-panel tr").forEach((node, i) => {
+    const nodeList = container.querySelectorAll("#data-panel tr");
+    expect(nodeList.length).toBe(5);
+    nodeList.forEach((node, i) => {
       expect(node.children[3].children[0].textContent).toBe(assistAns[i]);
       expect(node.children[3].children[1].className).toBe(
         "fa fa-plus-circle up"
@@ -85,7 +93,9 @@ describe("測試動態資料", () => {
 
   it("測試 抄截", () => {
     const stealAns = ["0", "3", "0", "6", "0"];
-    container.querySelectorAll("#data-panel tr").forEach((node, i) => {
+    const nodeList = container.querySelectorAll("#data-panel tr");
+    expect(nodeList.length).toBe(5);
+    nodeList.forEach((node, i) => {
       expect(node.children[4].children[0].textContent).toBe(stealAns[i]);
       expect(node.children[4].children[1].className).toBe(
         "fa fa-plus-circle up"
@@ -98,7 +108,9 @@ describe("測試動態資料", () => {
 
   it("測試 阻攻", () => {
     const blockAns = ["2", "0", "5", "0", "0"];
-    container.querySelectorAll("#data-panel tr").forEach((node, i) => {
+    const nodeList = container.querySelectorAll("#data-panel tr");
+    expect(nodeList.length).toBe(5);
+    nodeList.forEach((node, i) => {
       expect(node.children[5].children[0].textContent).toBe(blockAns[i]);
       expect(node.children[5].children[1].className).toBe(
         "fa fa-plus-circle up"
